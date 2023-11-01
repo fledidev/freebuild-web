@@ -1,9 +1,11 @@
+import Image from 'next/image'
+
 export default function Page({ params }: { params: { name: string } }) {
   return (
     <>
       <main className="inline-flex min-h-screen w-screen flex-col items-center justify-start gap-8 bg-slate-950 px-5 pb-8 pt-5 ">
         <div className="inline-flex items-center justify-center gap-3 self-stretch rounded bg-sky-950 px-6 py-3 lg:bg-transparent lg:py-6 ">
-          <img className="h-20 w-20" src={`https://mc-heads.net/avatar/${params.name}`} />
+          <Image className="h-20 w-20" src={`https://mc-heads.net/avatar/${params.name}`} alt="User Avatar" height={400} width={400} />
           <div className="inline-flex flex-col items-center justify-center gap-1">
             <p className="text-3xl font-normal text-white">{params.name}</p>
             <p className="text-xl font-normal text-yellow-400">Squad Yellow</p>
